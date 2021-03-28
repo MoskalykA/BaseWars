@@ -14,14 +14,23 @@ function Cray_Basewars.Data:SyncDataFile(ply)
         if not file.Exists('cray_basewars/player/' .. ply:SteamID64() .. '.json', 'DATA') then
             file.Write('cray_basewars/player/' .. ply:SteamID64() .. '.json', util.TableToJSON(Cray_Basewars.Data.PlayerBase))
         end
+
+        if not file.Exists('cray_basewars/faction/', 'DATA') then
+            file.CreateDir('cray_basewars/faction')
+        end
     else
         if not file.Exists('cray_basewars/', 'DATA') then
             file.CreateDir('cray_basewars')
             file.CreateDir('cray_basewars/player')
+            file.CreateDir('cray_basewars/faction')
         end
 
-        if not file.Exists('cray_basewars/player/', 'DATA') then
-            file.CreateDir('cray_basewars/player')
+        if not file.Exists('cray_basewars/faction/', 'DATA') then
+            file.CreateDir('cray_basewars/faction')
+        end
+
+        if not file.Exists('cray_basewars/faction/', 'DATA') then
+            file.CreateDir('cray_basewars/faction')
         end
     end
 end

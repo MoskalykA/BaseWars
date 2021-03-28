@@ -17,11 +17,7 @@ function GM:HUDDrawTargetID()
 end
 
 function GM:HUDPaint()
-    draw.SimpleText(Cray_Lib.Math:MoneyCommas(Cray_Lib.Data:GetData('Cray_Basewars.Data.Money', LocalPlayer())) .. ' | ', Cray_Lib.Fonts:Font(8), 10, 0, color_white)
-    draw.SimpleText('Level ' .. Cray_Lib.Data:GetData('Cray_Basewars.Data.Level', LocalPlayer()) .. ' | ', Cray_Lib.Fonts:Font(8), 90, 0, color_white)
-    draw.SimpleText(Cray_Lib.Data:GetData('Cray_Basewars.Data.Exp', LocalPlayer()) .. ' EXP | ', Cray_Lib.Fonts:Font(8), 170, 0, color_white)
-    draw.SimpleText(Cray_Lib.Data:GetData('Cray_Basewars.Data.Prestige', LocalPlayer()) .. ' Prestige | ', Cray_Lib.Fonts:Font(8), 240, 0, color_white)
-    draw.SimpleText('Faction - ' .. Cray_Lib.Data:GetData('Cray_Basewars.Data.Faction', LocalPlayer()), Cray_Lib.Fonts:Font(8), 350, 0, color_white)
+    draw.SimpleText(Cray_Lib.Math:MoneyCommas(Cray_Lib.Data:GetData('Cray_Basewars.Data.Money', LocalPlayer())) .. ' | Level ' .. Cray_Lib.Data:GetData('Cray_Basewars.Data.Level', LocalPlayer()) .. ' | ' .. Cray_Lib.Data:GetData('Cray_Basewars.Data.Exp', LocalPlayer()) .. ' EXP | ' .. Cray_Lib.Data:GetData('Cray_Basewars.Data.Prestige', LocalPlayer()) .. ' Prestige | ' .. 'Faction - ' .. Cray_Lib.Data:GetData('Cray_Basewars.Data.Faction', LocalPlayer()), Cray_Lib.Fonts:Font(8), 10, 0, color_white)
     
     self.Sandbox.HUDPaint(self)
 end
