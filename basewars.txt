@@ -1,0 +1,7 @@
+"basewars"
+{
+    "base"  "base"
+    "title" "Cray Basewars"
+    "category"  "Cray Basewars"
+    "menusystem"    "1"
+}
